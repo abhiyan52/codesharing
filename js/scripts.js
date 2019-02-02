@@ -1,4 +1,3 @@
-
 userType = 'participant'
 var language_selector = $('#select-language');
 var ws = new WebSocket("ws://localhost:8848/")
@@ -16,6 +15,13 @@ var editor = CodeMirror.fromTextArea(code, {
 });
 
 $(document).ready(()=>{
+
+    
+        iframe = document.getElementById('slide-frame')
+        console.log('sadasdas',  iframe.contentWindow.document.getElementsByTagName('button'));
+
+    
+
     $('#user-type').click(()=>{
         userType = $('#user-type-value').val()
         if(userType == 'host'){
